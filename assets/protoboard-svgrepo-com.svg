@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg fill="#000000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 496 496" xml:space="preserve">
+<g>
+	<g>
+		<g>
+			<path d="M448,192v-48h32v-16h-16V56c0-30.872-25.128-56-56-56s-56,25.128-56,56v72h-16v16h32v48H160v-48h16V0H32v144h16v48H0v304
+				h496V192H448z M368,56c0-22.056,17.944-40,40-40c22.056,0,40,17.944,40,40v72h-16V56h-48v16h32v56h-16V88h-16v40h-16V56z
+				 M432,144v48h-48v-48H432z M48,16h112v112H48V16z M144,144v48H64v-48H144z M480,480H16V208h32v80h16v-80h80v80h16v-80h208v112h16
+				V208h48v112h16V208h32V480z"/>
+			<rect x="176" y="240" width="16" height="16"/>
+			<rect x="304" y="240" width="16" height="16"/>
+			<path d="M304,288h-16v-16h-16v16h-16v-16h-16v16h-16v-16h-16v16h-16v-16h-16v16v112v16h16v-16h16v16h16v-16h16v16h16v-16h16v16
+				h16v-16h16v16h16v-16V288v-16h-16V288z M304,384H192v-80h112V384z"/>
+			<rect x="144" y="304" width="16" height="16"/>
+			<rect x="112" y="240" width="16" height="16"/>
+			<rect x="112" y="272" width="16" height="16"/>
+			<rect x="112" y="304" width="16" height="16"/>
+			<rect x="80" y="240" width="16" height="16"/>
+			<rect x="80" y="272" width="16" height="16"/>
+			<rect x="80" y="304" width="16" height="16"/>
+			<rect x="48" y="304" width="16" height="16"/>
+			<rect x="336" y="240" width="16" height="16"/>
+			<rect x="400" y="240" width="16" height="16"/>
+			<rect x="336" y="272" width="16" height="16"/>
+			<rect x="208" y="240" width="16" height="16"/>
+			<rect x="240" y="240" width="16" height="16"/>
+			<rect x="272" y="240" width="16" height="16"/>
+			<rect x="400" y="272" width="16" height="16"/>
+			<rect x="336" y="304" width="16" height="16"/>
+			<rect x="400" y="304" width="16" height="16"/>
+			<rect x="48" y="336" width="16" height="16"/>
+			<rect x="80" y="336" width="16" height="16"/>
+			<rect x="112" y="336" width="16" height="16"/>
+			<rect x="144" y="336" width="16" height="16"/>
+			<rect x="336" y="336" width="16" height="16"/>
+			<rect x="368" y="336" width="16" height="16"/>
+			<rect x="400" y="336" width="16" height="16"/>
+			<rect x="432" y="336" width="16" height="16"/>
+			<rect x="48" y="368" width="16" height="16"/>
+			<rect x="80" y="368" width="16" height="16"/>
+			<rect x="112" y="368" width="16" height="16"/>
+			<rect x="144" y="368" width="16" height="16"/>
+			<rect x="336" y="368" width="16" height="16"/>
+			<rect x="368" y="368" width="16" height="16"/>
+			<rect x="400" y="368" width="16" height="16"/>
+			<rect x="432" y="368" width="16" height="16"/>
+			<rect x="48" y="400" width="16" height="16"/>
+			<rect x="80" y="400" width="16" height="16"/>
+			<rect x="112" y="400" width="16" height="16"/>
+			<rect x="144" y="400" width="16" height="16"/>
+			<rect x="336" y="400" width="16" height="16"/>
+			<rect x="368" y="400" width="16" height="16"/>
+			<rect x="400" y="400" width="16" height="16"/>
+			<rect x="432" y="400" width="16" height="16"/>
+			<rect x="48" y="432" width="16" height="16"/>
+			<rect x="80" y="432" width="16" height="16"/>
+			<rect x="112" y="432" width="16" height="16"/>
+			<rect x="144" y="432" width="16" height="16"/>
+			<rect x="176" y="432" width="16" height="16"/>
+			<rect x="208" y="432" width="16" height="16"/>
+			<rect x="240" y="432" width="16" height="16"/>
+			<rect x="272" y="432" width="16" height="16"/>
+			<rect x="304" y="432" width="16" height="16"/>
+			<rect x="336" y="432" width="16" height="16"/>
+			<rect x="368" y="432" width="16" height="16"/>
+			<rect x="400" y="432" width="16" height="16"/>
+			<rect x="432" y="432" width="16" height="16"/>
+			<path d="M104,32c-22.056,0-40,17.944-40,40c0,22.056,17.944,40,40,40c22.056,0,40-17.944,40-40C144,49.944,126.056,32,104,32z
+				 M104,96c-10.416,0-19.216-6.712-22.528-16h45.048C123.216,89.288,114.416,96,104,96z M81.48,64c3.304-9.288,12.104-16,22.52-16
+				s19.216,6.712,22.528,16H81.48z"/>
+			<rect x="208" y="320" width="16" height="16"/>
+			<rect x="240" y="320" width="48" height="16"/>
+			<rect x="208" y="352" width="80" height="16"/>
+		</g>
+	</g>
+</g>
+</svg>

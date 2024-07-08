@@ -78,7 +78,40 @@
   ></script>
 
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<!-- typewriter -->
 
+<script>
+  const words = ["Hello, World!", "Welcome to my website!", "This is a typewriter effect."];
+  let i = 0;
+  let j = 0;
+  let currentWord = "";
+  let isDeleting = false;
+
+  function type() {
+    currentWord = words[i];
+    if (isDeleting) {
+      document.getElementById("typewriter").textContent = currentWord.substring(0, j-1);
+      j--;
+      if (j == 0) {
+        isDeleting = false;
+        i++;
+        if (i == words.length) {
+          i = 0;
+        }
+      }
+    } else {
+      document.getElementById("typewriter").textContent = currentWord.substring(0, j+1);
+      j++;
+      if (j == currentWord.length) {
+        isDeleting = true;
+      }
+    }
+    setTimeout(type, 100);
+  }
+
+  type();
+  </script>
+<!-- typewriter -->
 
 </head>
 
@@ -182,7 +215,7 @@
           <span
             @click="triggerNavItem('#statistics')"
             class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-            >Statistics</span
+            >Resume</span
           >
 
           <span
@@ -297,7 +330,7 @@
         <span
           @click="triggerMobileNavItem('#statistics')"
           class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-          >Statistics</span
+          >Resume</span
         >
 
       </li>
@@ -348,10 +381,14 @@
       </div>
       <div class="pt-8 sm:pt-10 lg:pl-8 lg:pt-0">
         <h1
+        id="typewriter"
           class="text-center font-header text-4xl text-white sm:text-left sm:text-5xl md:text-6xl"
         >
-          Hello I'm Nitesh Chourasiya!
+        Hello I'm Nitesh Chourasiya!
         </h1>
+
+          <!-- <h1 id="typewriter" class="text-4xl font-bold">hi</h1> -->
+
         <div
           class="flex flex-col justify-center pt-3 sm:flex-row sm:pt-5 lg:justify-start"
         >
@@ -852,18 +889,18 @@
     </div>
     </a>
 
-<a href="https://devsthanam.wuaze.com/">
+<a href="https://chat.whatsapp.com/Fhg2dV9VXVQCABxzv2s9JS">
     <div class="group rounded px-8 py-12 shadow hover:bg-primary">
       <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
         <div class="hidden group-hover:block">
           <img
-            src="/assets/img/devsthanam.jpeg"
+            src="/assets/img/code discussion.jpeg"
             alt="development icon"
           />
         </div>
         <div class="block group-hover:hidden">
           <img
-            src="/assets/img/devsthanam.jpeg"
+            src="/assets/img/code discussion.jpeg"
             alt="development icon"
           />
         </div>
@@ -872,10 +909,10 @@
         <h3
           class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl"
         >
-        DEVSTHANAM
+        CODE DISCUSSION
         </h3>
         <p class="text-grey pt-4 text-sm group-hover:text-white md:text-base">
-          Discover and explore temples across India
+          A coding Platform for future coders!
         </p>
       </div>
     </div>
@@ -989,7 +1026,7 @@
   <h3
     class="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl"
   >
-  Programming Journey Roadmap
+  My Programming Journey Roadmap
   </h3>
 
   <div class="relative mx-auto mt-12 flex w-full flex-col lg:w-2/3">
@@ -1000,9 +1037,14 @@
     <div class="mt-8 flex flex-col text-center md:flex-row md:text-left">
       <div class="md:w-2/5">
         <div class="flex justify-center md:justify-start">
-          <span class="shrink-0">
+          <span class="shrink-0 flex">
             <img
-              src="/assets/img/logo-spotify.svg"
+              src="/assets/python-svgrepo-com (1).svg"
+              class="h-auto w-32"
+              alt="company logo"
+            />
+            <img
+              src="/assets/java-svgrepo-com.svg"
               class="h-auto w-32"
               alt="company logo"
             />
@@ -1023,9 +1065,9 @@
           <div class="mt-1 flex">
             <i class="bx bxs-right-arrow hidden text-primary md:block"></i>
             <div class="md:-mt-1 md:pl-8">
-              <span class="block font-body font-bold text-grey-40"
+              <!-- <span class="block font-body font-bold text-grey-40"
                 >Apr 2015 - Mar 2018</span
-              >
+              > -->
               <span
                 class="block pt-2 font-header text-xl font-bold uppercase text-primary"
                 >Foundational Languages</span
@@ -1035,8 +1077,9 @@
                   >
                   <h1 class="font-bold">PYTHON</h1>
                   <p>Started with Python, gaining proficiency in its versatility and clean syntax.</p>
-                  <h1 class="font-bold">C++</h1>
+                  <h1 class="font-bold">C/C++</h1>
                   <p> Built a solid foundation in programming logic and memory management with C and C++.</p>
+                  <h1 class="font-bold">Java</h1>
                   </span
                 >
               </div>
@@ -1048,12 +1091,18 @@
     <div class="mt-8 flex flex-col text-center md:flex-row md:text-left">
       <div class="md:w-2/5">
         <div class="flex justify-center md:justify-start">
-          <span class="shrink-0">
+          <span class="shrink-0 flex">
             <img
-              src="/assets/img/logo-microsoft.svg"
+              src="/assets/javascript-svgrepo-com.svg"
               class="h-auto w-32"
               alt="company logo"
             />
+            <img
+              src="/assets/html-5-svgrepo-com.svg"
+              class="h-auto w-32"
+              alt="company logo"
+            />
+
           </span>
           <div class="relative ml-3 hidden w-full md:block">
             <span
@@ -1071,18 +1120,20 @@
           <div class="mt-1 flex">
             <i class="bx bxs-right-arrow hidden text-primary md:block"></i>
             <div class="md:-mt-1 md:pl-8">
-              <span class="block font-body font-bold text-grey-40"
+              <!-- <span class="block font-body font-bold text-grey-40"
                 >Mar 2018 - September 2019</span
-              >
+              > -->
               <span
                 class="block pt-2 font-header text-xl font-bold uppercase text-primary"
-                >Software Engineer</span
+                >Transition to Web Development</span
               >
               <div class="pt-2">
                 <span class="block font-body text-black"
-                  >Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Vestibulum mattis felis vitae risus pulvinar tincidunt. Nam ac
-                  venenatis enim.</span
+                  >
+                  <h1 class="font-bold">JavaScript</h1>
+                  <p>Transitioned to JavaScript for dynamic web development, mastering its asynchronous programming and DOM manipulation capabilities.</p>
+
+                  </span
                 >
               </div>
             </div>
@@ -1093,9 +1144,14 @@
     <div class="mt-8 flex flex-col text-center md:flex-row md:text-left">
       <div class="md:w-2/5">
         <div class="flex justify-center md:justify-start">
-          <span class="shrink-0">
+          <span class="shrink-0 flex">
             <img
-              src="/assets/img/logo-fedex.svg"
+              src="/assets/css-svgrepo-com.svg"
+              class="h-auto w-32"
+              alt="company logo"
+            />
+            <img
+              src="/assets/tailwind-svgrepo-com.svg"
               class="h-auto w-32"
               alt="company logo"
             />
@@ -1116,18 +1172,201 @@
           <div class="mt-1 flex">
             <i class="bx bxs-right-arrow hidden text-primary md:block"></i>
             <div class="md:-mt-1 md:pl-8">
-              <span class="block font-body font-bold text-grey-40"
-                >October 2019 - Feb 2021</span
-              >
+              <!-- <span class="block font-body font-bold text-grey-40"
+                >Mar 2018 - September 2019</span
+              > -->
               <span
                 class="block pt-2 font-header text-xl font-bold uppercase text-primary"
-                >DevOps Engineer</span
+                >Frontend Development</span
               >
               <div class="pt-2">
                 <span class="block font-body text-black"
-                  >Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Vestibulum mattis felis vitae risus pulvinar tincidunt. Nam ac
-                  venenatis enim.</span
+                  >
+                  <h1 class="font-bold">HTML/CSS</h1>
+                  <p>Acquired expertise in HTML for content structure and CSS for styling, ensuring visually appealing and responsive web designs.
+                  </p>
+                  <h1 class="font-bold">Tailwind Css</h1>
+                  <h1 class="font-bold">Advanced JavaScript</h1>
+                  <p>Delved deeper into JavaScript, integrating frameworks like React.js for building modern web applications.</p>
+
+                  </span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mt-8 flex flex-col text-center md:flex-row md:text-left">
+      <div class="md:w-2/5">
+        <div class="flex justify-center md:justify-start">
+          <span class="shrink-0 flex">
+            <img
+              src="/assets/git-svgrepo-com.svg"
+              class="h-auto w-32"
+              alt="company logo"
+            />
+            <img
+              src="/assets/php01-svgrepo-com.svg"
+              class="h-auto w-32"
+              alt="company logo"
+            />
+          </span>
+          <div class="relative ml-3 hidden w-full md:block">
+            <span
+              class="absolute inset-x-0 top-1/2 h-0.5 -translate-y-1/2 transform bg-grey-70"
+            ></span>
+          </div>
+        </div>
+      </div>
+      <div class="md:w-3/5">
+        <div class="relative flex md:pl-18">
+          <span
+            class="absolute left-8 top-1 hidden h-4 w-4 rounded-full border-2 border-grey-40 bg-white md:block"
+          ></span>
+
+          <div class="mt-1 flex">
+            <i class="bx bxs-right-arrow hidden text-primary md:block"></i>
+            <div class="md:-mt-1 md:pl-8">
+              <!-- <span class="block font-body font-bold text-grey-40"
+                >Mar 2018 - September 2019</span
+              > -->
+              <span
+                class="block pt-2 font-header text-xl font-bold uppercase text-primary"
+                >Project Development</span
+              >
+              <div class="pt-2">
+                <span class="block font-body text-black"
+                  >
+                  <h1 class="font-bold">Application Development</h1>
+                  <p> Created projects such as the FoodZone app and a responsive clothing website, applying frontend and backend skills to deliver user-centric solutions.</p>
+                  </span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mt-8 flex flex-col text-center md:flex-row md:text-left">
+      <div class="md:w-2/5">
+        <div class="flex justify-center md:justify-start">
+          <span class="shrink-0 flex">
+            <img
+              src="/assets/mongodb-svgrepo-com.svg"
+              class="h-auto w-32 pr-2"
+              alt="company logo"
+            />
+            <!-- <img
+              src="/assets/express-svgrepo-com.svg"
+              class="h-auto w-32"
+              alt="company logo"
+            /> -->
+            <img
+              src="/assets/react-svgrepo-com.svg"
+              class="h-auto w-32"
+              alt="company logo"
+            />
+            <!-- <img
+              src="/assets/nodejs-svgrepo-com.svg"
+              class="h-auto w-32"
+              alt="company logo"
+            /> -->
+            <!-- <img
+              src="/assets/next-js-svgrepo-com.svg"
+              class="h-auto w-32"
+              alt="company logo"
+            /> -->
+
+
+          </span>
+          <div class="relative ml-3 hidden w-full md:block">
+            <span
+              class="absolute inset-x-0 top-1/2 h-0.5 -translate-y-1/2 transform bg-grey-70"
+            ></span>
+          </div>
+        </div>
+      </div>
+      <div class="md:w-3/5">
+        <div class="relative flex md:pl-18">
+          <span
+            class="absolute left-8 top-1 hidden h-4 w-4 rounded-full border-2 border-grey-40 bg-white md:block"
+          ></span>
+
+          <div class="mt-1 flex">
+            <i class="bx bxs-right-arrow hidden text-primary md:block"></i>
+            <div class="md:-mt-1 md:pl-8">
+              <!-- <span class="block font-body font-bold text-grey-40"
+                >Mar 2018 - September 2019</span
+              > -->
+              <span
+                class="block pt-2 font-header text-xl font-bold uppercase text-primary"
+                >Full-Stack Development</span
+              >
+              <div class="pt-2">
+                <span class="block font-body text-black"
+                  >
+                  <h1 class="font-bold">MERN Stack </h1>
+                <p>Progressed to full-stack development using the MERN stack (MongoDB, Express.js, React, Node.js), focusing on scalable and efficient web applications.</p>
+                  </span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mt-8 flex flex-col text-center md:flex-row md:text-left">
+      <div class="md:w-2/5">
+        <div class="flex justify-center md:justify-start">
+          <span class="shrink-0 flex">
+            <img
+              src="/assets/express-svgrepo-com.svg"
+              class="h-auto w-32"
+              alt="company logo"
+            />
+            <img
+              src="/assets/nodejs-svgrepo-com.svg"
+              class="h-auto w-32"
+              alt="company logo"
+            />
+
+          </span>
+          <div class="relative ml-3 hidden w-full md:block">
+            <span
+              class="absolute inset-x-0 top-1/2 h-0.5 -translate-y-1/2 transform bg-grey-70"
+            ></span>
+          </div>
+        </div>
+      </div>
+      <div class="md:w-3/5">
+        <div class="relative flex md:pl-18">
+          <span
+            class="absolute left-8 top-1 hidden h-4 w-4 rounded-full border-2 border-grey-40 bg-white md:block"
+          ></span>
+
+          <div class="mt-1 flex">
+            <i class="bx bxs-right-arrow hidden text-primary md:block"></i>
+            <div class="md:-mt-1 md:pl-8">
+              <!-- <span class="block font-body font-bold text-grey-40"
+                >October 2019 - Feb 2021</span
+              > -->
+              <span
+                class="block pt-2 font-header text-xl font-bold uppercase text-primary"
+                >Continuous Learning</span
+              >
+              <div class="pt-2">
+                <span class="block font-body text-black"
+                  >
+                  <h1 class="font-bold">API Development</h1>
+                  <p>Expanding skills in API development, utilizing tools like Postman for testing and integration.</p>
+                  <h1 class="font-bold">PCB Design</h1>
+                  <p>Ventured into PCB design, combining hardware and software skills for embedded systems projects.</p>
+                  <h1 class="font-bold">AI and Data Science</h1>
+                  <p>Exploring AI and data science concepts, integrating machine learning models with web applications for enhanced functionality.</p>
+
+
+                  </span
                 >
               </div>
             </div>
@@ -1137,7 +1376,7 @@
     </div>
   </div>
 </div>
-
+<!--  here download resume -->
 <div
   class="bg-cover bg-top bg-no-repeat pb-16 md:py-16 lg:py-24"
   style="background-image: url(/assets/img/experience-figure.png)"
@@ -1145,10 +1384,31 @@
 >
   <div class="container">
     <div
-      class="mx-auto w-5/6 bg-white py-16 shadow md:w-11/12 lg:py-20 xl:py-24 2xl:w-full"
+      class="mx-auto w-5/6 bg-grey-50 py-16 shadow md:w-11/12 lg:py-20 xl:py-24 2xl:w-full"
     >
-      <div class="grid grid-cols-2 gap-5 md:gap-8 xl:grid-cols-4 xl:gap-5">
-        <div
+
+<div  class="flex flex-col items-center justify-center text-center ">
+  <h2
+  class="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-3xl lg:text-4xl"
+>
+  RESUME
+</h2>
+
+      <a href="./assets/Mr.-Nitesh-FlowCV-Resume-20240706 (1) (1) (1).pdf" download="Nitesh_Resume.pdf">
+        <button class="px-6 py-2 font-medium tracking-wide bg-primary text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-sm hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
+          DOWNLOAD
+      </button>
+      </a>
+
+      </div>
+
+
+
+
+
+
+
+        <!-- <div
           class="flex flex-col items-center justify-center text-center md:flex-row md:text-left"
         >
           <div>
@@ -1168,9 +1428,9 @@
               Finished Projects
             </h4>
           </div>
-        </div>
+        </div> -->
 
-        <div
+        <!-- <div
           class="flex flex-col items-center justify-center text-center md:flex-row md:text-left"
         >
           <div>
@@ -1234,28 +1494,29 @@
               Bugs Fixed
             </h4>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
 </div>
-
+<!-- projects starts from here -->
 <div class="bg-grey-50" id="blog">
   <div class="container py-16 md:py-20">
     <h2
       class="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
     >
-      I also like to write
+      PROJECTS
     </h2>
     <h4
       class="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl"
     >
-      Check out my latest posts!
+
+    Some more websites I created
     </h4>
     <div
       class="mx-auto grid w-full grid-cols-1 gap-6 pt-12 sm:w-3/4 lg:w-full lg:grid-cols-3 xl:gap-10"
     >
-      <a href="/post" class="shadow">
+      <a href="/" class="shadow">
         <div
           style="background-image: url(/assets/img/post-01.png)"
           class="group relative h-72 bg-cover bg-center bg-no-repeat sm:h-84 lg:h-64 xl:h-72"
@@ -1265,20 +1526,117 @@
           ></span>
           <span
             class="absolute right-0 bottom-0 mr-4 mb-4 block rounded-full border-2 border-white px-6 py-2 text-center font-body text-sm font-bold uppercase text-white md:text-base"
-            >Read More</span
+            >CODE</span
           >
         </div>
         <div class="bg-white py-6 px-5 xl:py-8">
           <span class="block font-body text-lg font-semibold text-black"
             >How to become a frontend developer</span
           >
-          <span class="block pt-2 font-body text-grey-20"
-            >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.</span
-          >
+
         </div>
       </a>
-      <a href="/post" class="shadow">
+      <a href="/" class="shadow">
+        <div
+          style="background-image: url(/assets/img/post-01.png)"
+          class="group relative h-72 bg-cover bg-center bg-no-repeat sm:h-84 lg:h-64 xl:h-72"
+        >
+          <span
+            class="absolute inset-0 block bg-gradient-to-b from-blog-gradient-from to-blog-gradient-to bg-cover bg-center bg-no-repeat opacity-10 transition-opacity group-hover:opacity-50"
+          ></span>
+          <span
+            class="absolute right-0 bottom-0 mr-4 mb-4 block rounded-full border-2 border-white px-6 py-2 text-center font-body text-sm font-bold uppercase text-white md:text-base"
+            >CODE</span
+          >
+        </div>
+        <div class="bg-white py-6 px-5 xl:py-8">
+          <span class="block font-body text-lg font-semibold text-black"
+            >How to become a frontend developer</span
+          >
+
+        </div>
+      </a>
+      <a href="/" class="shadow">
+        <div
+          style="background-image: url(/assets/img/post-01.png)"
+          class="group relative h-72 bg-cover bg-center bg-no-repeat sm:h-84 lg:h-64 xl:h-72"
+        >
+          <span
+            class="absolute inset-0 block bg-gradient-to-b from-blog-gradient-from to-blog-gradient-to bg-cover bg-center bg-no-repeat opacity-10 transition-opacity group-hover:opacity-50"
+          ></span>
+          <span
+            class="absolute right-0 bottom-0 mr-4 mb-4 block rounded-full border-2 border-white px-6 py-2 text-center font-body text-sm font-bold uppercase text-white md:text-base"
+            >CODE</span
+          >
+        </div>
+        <div class="bg-white py-6 px-5 xl:py-8">
+          <span class="block font-body text-lg font-semibold text-black"
+            >How to become a frontend developer</span
+          >
+
+        </div>
+      </a>
+      <a href="/" class="shadow">
+        <div
+          style="background-image: url(/assets/img/post-01.png)"
+          class="group relative h-72 bg-cover bg-center bg-no-repeat sm:h-84 lg:h-64 xl:h-72"
+        >
+          <span
+            class="absolute inset-0 block bg-gradient-to-b from-blog-gradient-from to-blog-gradient-to bg-cover bg-center bg-no-repeat opacity-10 transition-opacity group-hover:opacity-50"
+          ></span>
+          <span
+            class="absolute right-0 bottom-0 mr-4 mb-4 block rounded-full border-2 border-white px-6 py-2 text-center font-body text-sm font-bold uppercase text-white md:text-base"
+            >CODE</span
+          >
+        </div>
+        <div class="bg-white py-6 px-5 xl:py-8">
+          <span class="block font-body text-lg font-semibold text-black"
+            >How to become a frontend developer</span
+          >
+
+        </div>
+      </a>
+      <a href="/" class="shadow">
+        <div
+          style="background-image: url(/assets/img/post-01.png)"
+          class="group relative h-72 bg-cover bg-center bg-no-repeat sm:h-84 lg:h-64 xl:h-72"
+        >
+          <span
+            class="absolute inset-0 block bg-gradient-to-b from-blog-gradient-from to-blog-gradient-to bg-cover bg-center bg-no-repeat opacity-10 transition-opacity group-hover:opacity-50"
+          ></span>
+          <span
+            class="absolute right-0 bottom-0 mr-4 mb-4 block rounded-full border-2 border-white px-6 py-2 text-center font-body text-sm font-bold uppercase text-white md:text-base"
+            >CODE</span
+          >
+        </div>
+        <div class="bg-white py-6 px-5 xl:py-8">
+          <span class="block font-body text-lg font-semibold text-black"
+            >How to become a frontend developer</span
+          >
+
+        </div>
+      </a>
+      <a href="/" class="shadow">
+        <div
+          style="background-image: url(/assets/img/post-01.png)"
+          class="group relative h-72 bg-cover bg-center bg-no-repeat sm:h-84 lg:h-64 xl:h-72"
+        >
+          <span
+            class="absolute inset-0 block bg-gradient-to-b from-blog-gradient-from to-blog-gradient-to bg-cover bg-center bg-no-repeat opacity-10 transition-opacity group-hover:opacity-50"
+          ></span>
+          <span
+            class="absolute right-0 bottom-0 mr-4 mb-4 block rounded-full border-2 border-white px-6 py-2 text-center font-body text-sm font-bold uppercase text-white md:text-base"
+            >CODE</span
+          >
+        </div>
+        <div class="bg-white py-6 px-5 xl:py-8">
+          <span class="block font-body text-lg font-semibold text-black"
+            >How to become a frontend developer</span
+          >
+
+        </div>
+      </a>
+      <!-- <a href="/post" class="shadow">
         <div
           style="background-image: url(/assets/img/post-02.png)"
           class="group relative h-72 bg-cover bg-center bg-no-repeat sm:h-84 lg:h-64 xl:h-72"
@@ -1323,7 +1681,7 @@
             eiusmod tempor incididunt ut labore et dolore magna aliqua.</span
           >
         </div>
-      </a>
+      </a> -->
     </div>
   </div>
 </div>
@@ -1458,7 +1816,60 @@
       © Copyright 2022. All right reserved, ATOM.
     </p>
     <div class="flex items-center justify-center pt-5 sm:justify-start sm:pt-0">
-      <a href="/">
+
+      <a href="https://www.facebook.com/profile.php?id=100074906294960">
+        <i
+          class="bx bxl-facebook-square text-2xl text-white
+           hover:text-yellow"
+        ></i>
+      </a>
+      <a href="https://x.com/JatinTurbo" class="pl-4">
+        <i
+          class="bx bxl-twitter text-2xl text-white
+           hover:text-yellow"
+        ></i>
+      </a>
+      <a href="https://github.com/jattu8602" class="pl-4">
+        <i
+          class="bx bxl-github text-2xl text-white
+           hover:text-yellow"
+        ></i>
+      </a>
+      <a href="https://www.linkedin.com/in/nitesh-chourasiya-a66715292/" class="pl-4">
+        <i
+          class="bx bxl-linkedin text-2xl text-white
+           hover:text-yellow"
+        ></i>
+      </a>
+      <a href="https://www.instagram.com/chaurasiyajatin68/" class="pl-4">
+        <i
+          class="bx bxl-instagram text-2xl text-white
+           hover:text-yellow"
+        ></i>
+      </a>
+      <a href="https://www.youtube.com/channel/UCviM2F-MFvZz_oibvWZgJRQ" class="pl-4">
+        <i
+          class="bx bxl-youtube text-2xl text-white
+           hover:text-yellow"
+        ></i>
+      </a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- // -->
+      <!-- <a href="https://www.facebook.com/profile.php?id=100074906294960">
         <i
           class="bx bxl-facebook-square text-2xl text-white hover:text-yellow"
         ></i>
@@ -1474,7 +1885,11 @@
       </a>
       <a href="/" class="pl-4">
         <i class="bx bxl-instagram text-2xl text-white hover:text-yellow"></i>
-      </a>
+      </a> -->
+
+
+
+      <!-- ////// -->
     </div>
   </div>
 </div>
